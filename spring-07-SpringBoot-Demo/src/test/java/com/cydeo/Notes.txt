@@ -1,0 +1,81 @@
+Spring Boot Structure
+src/main/java: contains application source code
+scr/main/resources: contains non-java resources images, html files etc...
+src/test/java: Contains test code unit testing integration testing we are testing our code
+mvnw and mvnw.cmd maven wrapper scripts you can use these scripts to build your project, even if you don not have Maven
+installed on your machine
+pom.xml : This is Maven build tool -maven specification
+CydeoApplication.java: this is the Spring boot main class that bootstraps
+the project
+application.properties: initially empty, offers a place where you can specify
+configuration properties - external data or input data: placed in the file as  key and value urls
+// not the configuration file for beans
+
+// we won't be using in the environment with static and templates as a
+backhand developer
+resources/static: contains any static content(images,css,java script,etc)
+resources/templates: contains template files that will be used to render content
+to the browser (folders come with Thymeleaf dependency)
+custom css code place under static
+
+CydeoApplicationTests: This is a simple test class to ensure that the
+Spring application context loads successfully. You will add more
+tests to the mix as you develop the application.
+
+/target/
+/out/
+/.idea/
+*.iml
+/.mvn/
+mvnw.cmd
+mvnw
+
+Build spring specification:
+<parent>: This specifies that your project has spring boot starter parent as its parent POM. This parent POM provides
+dependency management for several libraries commonly used in Spring projects.
+For those libraries covered by the parent POM, you won't have to specify a version, because it is inherited from the parent.
+
+All dependencies have the word starter in their artifact id
+Your build file will be significantly smaller and easier to manage because you won't need to declare a
+dependency on every library you might need.
+You are able to think of your dependencies in terms of what capabilities they provide,
+rather than their library names (web starter dependency)
+
+Spring boot plugin
+spring boot build image: we will use in the deployment
+-it provides a Maven goal that enables you to the application using maven
+-it ensures that all dependency libraries are included within the executable JAR
+
+Maven has goals as well... refresh for example goals-> plugins
+-----
+Bootstrapping the application
+@SpringBootApplication: is a composite annotation that combines the following annotations:
+-@SpringBootConfiguration:
+Designates this class as a configuration class
+Annotate all classes with @ componenet
+Create a configuration class with @ComponentScan and @Configuration annotations
+You can add Java based Spring framework configuration to this class if you need to.
+This annotation is specialized form of the @Configuration annotation.
+Always put your runner in your base package. @SpringBootApplication holds @Configuration and @ComponentScan will scan
+all the files for @Component.
+It should be under com.cydeo
+We can add @Bean because this is our configuration class.
+
+-@EnableAutoConfiguration
+Enables Spring Boot automatic configuration. It tells Spring Boot to automatically configure any component
+that it thinks you will need.
+
+-@ComponentScan: Enables component scanning
+
+main method():
+calls a static run method on SpringApplication class which performs the actual bootstrapping of the application,
+creating the Spring Application context. The two parameters passed to run() method are a configuration class, and
+the command line arguments.
+SpringApplication.run(CydeoApplication.class, args)// The container
+Springboot is using  ApplicationContext
+ApplicationContext container=SpringApplication.run(CydeoApplication.class,args);
+same as SpringApplication.run(CydeoApplication.class,args)
+It is creating a container.
+-------------------------------
+
+
