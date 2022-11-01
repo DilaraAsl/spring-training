@@ -1,6 +1,5 @@
 package com.cydeo.bootstrap;
 
-import com.cydeo.entity.*;
 import com.cydeo.enums.Status;
 import com.cydeo.repository.CartRepository;
 import com.cydeo.repository.ItemRepository;
