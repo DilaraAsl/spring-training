@@ -1,6 +1,6 @@
 package com.model;
 
-import com.enums.Gender;
+import com.cydeo.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

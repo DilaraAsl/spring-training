@@ -2,7 +2,7 @@ package com.service;
 
 import com.model.Comment;
 import com.proxy.CommentNotificationProxy;
-import com.repository.CommentRepository;
+import com.cydeo.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;

@@ -4,7 +4,7 @@ import com.config.AppConfigData;
 import com.config.DBConfigData;
 import com.model.Comment;
 import com.proxy.CommentNotificationProxy;
-import com.repository.CommentRepository;
+import com.cydeo.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 

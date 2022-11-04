@@ -1,8 +1,8 @@
 package com;
 
-import com.repository.DepartmentRepository;
-import com.repository.EmployeeRepository;
-import com.repository.RegionRepository;
+import com.cydeo.repository.DepartmentRepository;
+import com.cydeo.repository.EmployeeRepository;
+import com.cydeo.repository.RegionRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
