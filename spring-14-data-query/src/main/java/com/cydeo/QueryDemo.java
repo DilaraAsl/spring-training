@@ -1,4 +1,4 @@
-package com;
+package com.cydeo;
 
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
