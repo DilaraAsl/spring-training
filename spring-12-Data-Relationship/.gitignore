@@ -40,3 +40,9 @@ build/
 /.mvn/
 mvnw.cmd
 mvnw
+
+*.iml
+/.mvn/
+mvnw.cmd
+mvnw
+/*/src/main/resources/application.properties
