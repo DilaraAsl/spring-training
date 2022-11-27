@@ -8,7 +8,7 @@ import java.util.List;
 
 //@Controller
 @RestController
-@RequestMapping("courses")
+@RequestMapping("courses/api/v1") // v1->version 1 best practice to name your end points
 public class CourseController {
 
     private final CourseService courseService;
