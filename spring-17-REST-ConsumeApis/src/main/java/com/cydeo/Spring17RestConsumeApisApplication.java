@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients // can be placed at configuration classes
 public class Spring17RestConsumeApisApplication {
 
     public static void main(String[] args) {
