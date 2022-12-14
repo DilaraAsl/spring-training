@@ -3,7 +3,9 @@ package com.cydeo.service.impl;
 import com.cydeo.model.Organization;
 import com.cydeo.repository.OrganizationRepository;
 import com.cydeo.service.OrganizationService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OrganizationServiceImpl implements OrganizationService {
     private final OrganizationRepository organizationRepository;
 
