@@ -27,7 +27,9 @@ public class CalculatorParameterizedTest {
     }
 
     @ParameterizedTest
-    @MethodSource("stringProvider") // values are coming from stringProvider method as a String array
+    @MethodSource("stringProvider")// we are testing the values that are coming from a method
+        // values are coming from stringProvider method as a String array
+    // if method is in another class then Class.methodname
     void testCase4(String arg){
         Assertions.assertFalse(arg.isEmpty());
     }
@@ -46,6 +48,7 @@ public class CalculatorParameterizedTest {
     }
     @ParameterizedTest
     @CsvFileSource(resources="/sample-data.csv",numLinesToSkip = 1)
+    //we are skipping the first line which are labels in our csv file
     void testCase6(int num1, int num2, int result){
         Assertions.assertEquals(result,Calculator.add(num1,num2));
     }

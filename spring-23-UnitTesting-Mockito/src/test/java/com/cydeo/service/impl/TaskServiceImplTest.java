@@ -50,6 +50,7 @@ class TaskServiceImplTest {
 
     @Test
     void findById_BDD_Test(){ // behavior driven development
+        // given() and then() coming from MockitoBDD
 
         // given
         Task task=new Task();
@@ -60,7 +61,7 @@ class TaskServiceImplTest {
         taskService.findById(anyLong());
 
         //then
-        then(taskRepository).should().findById(anyLong());
+        then(taskRepository).should().findById(anyLong());// instead of verify we are using then and should
         then(taskMapper).should(atLeastOnce()).convertToDto(task);
     }
 

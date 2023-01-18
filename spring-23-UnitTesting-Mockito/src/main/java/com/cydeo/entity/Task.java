@@ -7,7 +7,7 @@ import lombok.Setter;
 import org.hibernate.annotations.Where;
 
 import java.time.LocalDate;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "tasks")
 @Getter

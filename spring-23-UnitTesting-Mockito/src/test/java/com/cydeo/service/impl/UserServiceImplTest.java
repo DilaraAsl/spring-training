@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class) // tells mockito to create mocks using @Mock -JUnit5 --for JUnit 4 use Mock.init()
+//Junit and mockito works well together if we are using them together
 class UserServiceImplTest {
     @Mock
     UserRepository userRepository;
@@ -28,7 +29,8 @@ class UserServiceImplTest {
 
         // calls the real method
         userService.findByUserName("harold@manager.com");
-        // checks if the methods are executed or not
+
+        // verify checks if the methods are executed or not
         verify(userRepository).findByUserNameAndIsDeleted("harold@manager.com",false);
         verify(userRepository,times(1)).findByUserNameAndIsDeleted("harold@manager.com",false);
         verify(userRepository,atLeastOnce()).findByUserNameAndIsDeleted("harold@manager.com",false);
